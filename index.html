@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <!-- Defaults -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    <title>Vue Notes</title>
+
+    <!-- Add Vue -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Add Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Add vue fron CDN</h1>
+    <p>In the head tag add: </p>
+    <code>
+        &lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
+    </code>
+
+    <h1>Vue instance</h1>
+    <p>A vue instance is declared like so:</p>
+    <code>var vm = new Vue({ // options })</code>
+
+    <h1>Hello world</h1>
+    <p>Say hello world with vue by adding these lines of code:</p>
+    <p>In <code>main.js</code>:</p>
+    <code>new Vue({ el: '#hello', data: { greeting: 'hello world'}})</code><br>
+    <br>
+    <p>In <code>index.html</code>:</p>
+    <code>
+        &lt;div id='hello'&gt;<br>
+        &nbsp&lt;p&gt;{{ greeting }}&lt;/p&gt;<br>
+        &lt;/div&gt;
+    </code>
+    <blockquote>
+        e.g. output from vue👇<br>
+        <div id="hello">
+            <strong>{{ greeting }}</strong>
+        </div>
+    </blockquote>
+    
+    <div id="data">
+        <h1>Dynamically access data</h1>
+        <!-- 'v-pre' is used for displaying raw mustache tags -->
+        <!-- doc: https://vuejs.org/v2/api/#v-pre -->
+        <p>Use the double-mastach syntax: <code v-pre>{{ variableName }}</code> to access data in vue</p>
+        <blockquote>
+            e.g. output from vue👇<br>
+            first name is <strong>{{ firstName }}</strong><br>
+            last name is <strong>{{ lastName }}</strong><br>
+            profession is <strong>{{ profession }}</strong>
+        </blockquote>
+    </div>
+
+    <div id="method">
+        <h1>Access method in vue</h1>
+        <p>Use the double-mastach syntax: <code v-pre>{{ methodName(param1) }}</code> to use method in vue</p>
+        <blockquote>
+            e.g. output from vue👇<br>
+            calling <code>greet()</code> gives <strong>{{ greet() }}</strong><br>
+            calling <code>add(2, 3)</code> gives <strong>{{ add(2, 3) }}</strong>
+        </blockquote>
+    </div>
+
+    <div id="binding">
+        <h1>Assign vue data to html attributes</h1>
+        <p>
+            Use data binding: <code>v-bind:href="link"</code> to assign vue data as html element attribute.
+            Shortcut for v-bind is: <code>:href="link"</code>.
+            Value of <code>href</code> will be rendered and assigned the value of <code>link</code> stored in vue data.
+        </p>
+        <blockquote>
+            e.g. output from vue👇<br>
+            <a v-bind:href="link" target = "_blank"><strong>Link</strong></a>
+        </blockquote>
+    </div>
+
+    <div id="two-way-binding">
+        <h1>Two-way data binding</h1>
+        <p>
+            Use two way data binding: <code>v-model:"name"</code> to update vue data.
+            As user input gets updated, vue data gets updated too.
+        </p>
+        <blockquote>
+            e.g. effect of two way data binding👇<br>
+            <strong>vue data: {{ name }}</strong><br>
+            <input type="text" v-model="name" placeholder="user input..."/>
+        </blockquote>
+    </div>
+
+    <div id="html">
+        <h1>Add html from vue data</h1>
+        <p>
+            Use <code>v-html</code> directive: <code>v-html="linkTag"</code> to add html from vue data.
+        </p>
+        <blockquote>
+            e.g. output from vue👇<br>
+            <p v-html="linkTag"></p>
+        </blockquote>
+    </div>
+
+    <div id="events">
+        <h1>Reacting to events</h1>
+        <p>
+            Use <code>v-on</code> directive: <code>v-on:click="methodName"</code> to handel events.
+            Shortcut for <code>v-on</code> is <code>@click="methodName"</code>
+        </p>
+        <blockquote>
+            e.g. output from vue👇<br>
+            <strong>{{ age }}</strong><br>
+            <button v-on:click="addOneYear">Add one year</button>
+            <button @click="subOneYear">Subtract one year</button>
+        </blockquote>
+        <blockquote>
+            e.g. track cursor movements<br>
+            <strong>{{ x }}, {{ y }}</strong>
+            <div class="canvas" @mousemove="updateCoordinates"></div>
+        </blockquote>
+    </div>
+
+    <!-- insert javascript -->
+    <script src="main.js"></script>
+</body>
+</html>
