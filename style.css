@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
 *::selection {
     background: #fad400;
@@ -15,7 +15,7 @@ h1 {
     margin: 2rem 0 0 0;
 }
 code {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 0.9rem;
     background-color: #E8E8E8;
     padding: 1px;
