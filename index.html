@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Add vue fron CDN</h1>
+    <h1>Add vue from CDN</h1>
     <p>In the head tag add: </p>
     <code>
         &lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
@@ -87,7 +87,7 @@
         <blockquote>
             e.g. effect of two way data binding👇<br>
             <strong>vue data: {{ name }}</strong><br>
-            <input type="text" v-model="name" placeholder="user input..."/>
+            <input v-model="name" type="text" placeholder="user input..."/>
         </blockquote>
     </div>
 
@@ -111,8 +111,8 @@
         <blockquote>
             e.g. output from vue👇<br>
             <strong>{{ age }}</strong><br>
-            <button v-on:click="addOneYear">Add one year</button>
-            <button @click="subOneYear">Subtract one year</button>
+            <button v-on:click="addOneYear">Add 1</button>
+            <button @click="subOneYear">Subtract 1</button>
         </blockquote>
         <blockquote>
             e.g. track cursor movements<br>
