@@ -83,3 +83,16 @@ const vm7 = new Vue({
         }
     }
 })
+
+const vm8 = new Vue({
+    el: '#keyboard',
+    data: {
+        message: '',
+        name: ''
+    },
+    methods: {
+        enterName: function() {
+            this.message = 'you entered your name as ' + this.name;
+        }
+    }
+})

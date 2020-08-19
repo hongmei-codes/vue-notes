@@ -133,6 +133,18 @@
         </blockquote>
     </div>
 
+    <div id="keyboard">
+        <h1>Keyboard Events</h1>
+        <p>
+            Use keyup: <code>v-on:keyup.enter="methodName"</code> to handel events triggered by key press.
+        </p>
+        <blockquote>
+            e.g. Press 'ENTER' to see event👇<br>
+            <input type="text" placeholder="enter name" v-on:keyup.enter="enterName" v-model="name"></input>
+            <strong>{{ message }}</strong>
+        </blockquote>
+    </div>
+
     <!-- insert javascript -->
     <script src="main.js"></script>
 </body>
