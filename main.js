@@ -71,3 +71,15 @@ const vm6 = new Vue({
         name: ''
     }
 })
+
+const vm7 = new Vue({
+    el: '#modifier',
+    data: {
+        clicked: 0
+    },
+    methods: {
+        once: function() {
+            this.clicked++;
+        }
+    }
+})

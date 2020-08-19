@@ -111,13 +111,25 @@
         <blockquote>
             e.g. output from vue👇<br>
             <strong>{{ age }}</strong><br>
-            <button v-on:click="addOneYear">Add 1</button>
-            <button @click="subOneYear">Subtract 1</button>
+            <button v-on:click="addOneYear">+1</button>
+            <button @click="subOneYear">-1</button>
         </blockquote>
         <blockquote>
             e.g. track cursor movements<br>
             <strong>{{ x }}, {{ y }}</strong>
             <div class="canvas" @mousemove="updateCoordinates"></div>
+        </blockquote>
+    </div>
+
+    <div id="modifier">
+        <h1>Event Modifier</h1>
+        <p>
+            Use event modifiers: <code>v-on:click.once="methodName"</code> to modify event behavior.
+        </p>
+        <blockquote>
+            e.g. Button can only be clicked once👇<br>
+            Times button was clicked: <strong>{{ clicked }}</strong><br>
+            <button v-on:click.once="once">once only</button>
         </blockquote>
     </div>
 
